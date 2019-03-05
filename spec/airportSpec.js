@@ -4,10 +4,11 @@ describe ('Airport', function(){
   it ('must create a airport object, default is not null',function() {
     airport = new Airport();
 });
-//   it "must be able to change the capacity " do
-//     airport = Airport.new
-//     expect(airport.capacity(1000)).to eq "Airport capacity is now 1000"
-//   end
-//
-// end
+  it ("must be able to change the capacity ", function () {
+    airport = new Airport()
+    expect(airport.setCapacity(1000)).toBe("Airport capacity is now 1000")
+  
+
+
+  })
 });
