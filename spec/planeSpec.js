@@ -12,12 +12,11 @@ describe ('Plane', function(){
     expect(plane.land()).toBe(true)
   });
 
-//   it "the plane must be able to receive the message to land" do
-//     plane = Plane.new
-//     weather = Weather.new
-//     expect(plane.land(weather.stormy?)).to eq true
-//   end
-//
+  it ("the plane must be able to takeoff", function () {
+    plane = new Plane
+    expect(plane.takeoff()).toBe(true)
+  });
+
 //   it "the plane must be able to receive the message to takeoff" do
 //     plane = Plane.new
 //     weather = Weather.new

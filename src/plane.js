@@ -8,9 +8,13 @@ function Plane(){
 //     @airbourne = false
 //   end
 //
-
 Plane.prototype.land = function() {
   this.airbourne = false
+  return true
+}
+
+Plane.prototype.takeoff = function() {
+  this.airbourne = true
   return true
 }
 //  # Note that condiion can be any condition that prevents landing
