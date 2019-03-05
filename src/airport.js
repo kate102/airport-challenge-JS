@@ -1,7 +1,12 @@
 // This is the airport class
 
-function Airport() {
+function Airport(full) {
   this.capacity = 50
+  this.full = full
+}
+
+Airport.prototype.isFull = function(){
+  return this.full
 }
 
 Airport.prototype.setCapacity = function(capacity) {

@@ -8,12 +8,15 @@ function Plane(){
 //     @airbourne = false
 //   end
 //
-Plane.prototype.land = function() {
-  this.airbourne = false
-  return true
+Plane.prototype.land = function(airport) {
+  if (!airport.isFull()) {this.airbourne = false
+    return true} 
+  else {
+      return false  
+  }
 }
 
-Plane.prototype.takeoff = function() {
+Plane.prototype.takeoff = function(airport) {
   this.airbourne = true
   return true
 }

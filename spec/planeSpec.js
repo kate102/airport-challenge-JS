@@ -9,38 +9,22 @@ describe ('Plane', function(){
 
   it ("the plane must be able to land", function () {
     plane = new Plane
-    expect(plane.land()).toBe(true)
+    airport = new Airport(false)
+    expect(plane.land(airport)).toBe(true)
   });
 
   it ("the plane must be able to takeoff", function () {
     plane = new Plane
-    expect(plane.takeoff()).toBe(true)
+    airport = new Airport(false)
+    expect(plane.takeoff(airport)).toBe(true)
   });
 
-//   it "the plane must be able to receive the message to takeoff" do
-//     plane = Plane.new
-//     weather = Weather.new
-//     expect(plane.takeoff(weather.stormy?)).to eq true
-//   end
-//
-//   it "the plane must confirm it is in the air after takeoff" do
-//     plane = Plane.new
-//     weather = Weather.new
-//     expect(plane.takeoff(weather.stormy?)).to eq true
-//   end
-//
-//   it "must not take off if weather status is stormy " do
-//     plane = Plane.new
-//     weather = Weather.new("Stormy")
-//     expect(plane.takeoff(weather.stormy?)).to eq false
-//   end
-//
-//   it "must not land if weather status is stormy " do
-//     plane = Plane.new
-//     weather = Weather.new("Stormy")
-//     expect(plane.land(weather.stormy?)).to eq false
-//   end
-//
+  it ("must not land if airport is full ", function() {
+    plane = new Plane
+    airport = new Airport(true)
+    expect(plane.land(airport)).toBe(false)
+  });
+
 //   it "must not land if airport is full " do
 //     plane = Plane.new
 //     full = true
