@@ -7,7 +7,10 @@ describe ('Plane', function(){
     plane = new Plane
   });
 
-
+  it ("the plane must be able to land", function () {
+    plane = new Plane
+    expect(plane.land()).toBe(true)
+  });
 
 //   it "the plane must be able to receive the message to land" do
 //     plane = Plane.new

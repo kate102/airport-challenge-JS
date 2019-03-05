@@ -1,5 +1,5 @@
 function Plane(){
-
+  this.airbourne = false
 }
 
 //   attr_writer :airbourne
@@ -8,6 +8,11 @@ function Plane(){
 //     @airbourne = false
 //   end
 //
+
+Plane.prototype.land = function() {
+  this.airbourne = false
+  return true
+}
 //  # Note that condiion can be any condition that prevents landing
 //   def land(bad_condition)
 //     if bad_condition
